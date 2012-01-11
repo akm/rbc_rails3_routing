@@ -10,7 +10,7 @@ RbcRails3Routing::Application.routes.draw do
 
   # 2.6 コントローラーのネームスペースとルーティング(Controller Namespaces and Routing)
   # パスの先頭に /admin 無し
-  scope :module => "admin" do
+  scope "/admin" do
     resources :posts, :comments
   end
 
