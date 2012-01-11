@@ -9,7 +9,8 @@ RbcRails3Routing::Application.routes.draw do
   resource :geocoder
 
   # 2.6 コントローラーのネームスペースとルーティング(Controller Namespaces and Routing)
-  namespace "admin" do
+  # パスの先頭に /admin 無し
+  scope :module => "admin" do
     resources :posts, :comments
   end
 
