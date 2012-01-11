@@ -14,6 +14,10 @@ RbcRails3Routing::Application.routes.draw do
     resources :posts, :comments
   end
 
+  resources :magazines do
+    resources :ads
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
