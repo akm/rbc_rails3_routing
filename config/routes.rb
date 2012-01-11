@@ -6,6 +6,8 @@ RbcRails3Routing::Application.routes.draw do
   # 2.5 単一のリソース(Singular Resources)
   match "profile" => "users#show"
 
+  resource :geocoder
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
