@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 RbcRails3Routing::Application.routes.draw do
-  resources :photos
+  # モデルなくてもrake routesで確認できます
+  resources :photos, :books, :videos
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
