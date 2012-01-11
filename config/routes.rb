@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 RbcRails3Routing::Application.routes.draw do
   # モデルなくてもrake routesで確認できます
-  resources :photos, :books, :videos
+  resources :photos do
+    # 2.9.1 メンバルーティングの追加
+    member do
+      get 'preview'
+    end
+  end
 
   # 2.5 単一のリソース(Singular Resources)
   match "profile" => "users#show"
