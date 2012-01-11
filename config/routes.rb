@@ -6,6 +6,9 @@ RbcRails3Routing::Application.routes.draw do
     member do
       get 'preview'
     end
+    collection do
+      get 'search'
+    end
   end
 
   # 2.5 単一のリソース(Singular Resources)
